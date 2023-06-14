@@ -1,3 +1,2 @@
 #!/bin/bash
-IFS=':' read -ra directories <<< "$PATH"
-num_directories=${#directories[@]}
+echo $((' echo $PATH | grep -o ":/" | wc-1 ' +1))
